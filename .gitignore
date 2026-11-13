@@ -1,0 +1,8 @@
+/db/
+/parts/
+/runtime/
+/site/
+/wp-cli.phar
+.DS_Store
+.env
+.env.*
