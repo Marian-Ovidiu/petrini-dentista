@@ -18,3 +18,11 @@ componente. Lo script legge il commit di `origin/main` e invia via SSH
 solo i file versionati del componente. I file rimossi da Git richiedono
 una rimozione esplicita sul server. Attiva un nuovo tema o plugin da WordPress
 quando sei pronto e verifica il sito dopo ogni deploy.
+
+### Collaudo con git pull su Hostinger
+
+Nel checkout del dominio, imposta una volta `git config core.hooksPath scripts/git-hooks`.
+Il prossimo pull con nuovi commit esegue l'hook post-merge. Il collaudo pubblica
+solo `deploy/petrini-deploy-check.txt` all'indirizzo `/petrini-deploy-check.txt`.
+Se il checkout è già aggiornato, esegui `sh scripts/git-hooks/post-merge`
+per il primo collaudo.
